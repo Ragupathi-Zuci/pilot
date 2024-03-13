@@ -1,0 +1,33 @@
+<div class="whole-body">
+    <!-- <app-navbar></app-navbar> -->
+    <div class="body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Mobile Number</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">District</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Additional Mobile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of allOrders">
+                    <td>{{order.firstName}}</td>
+                    <td>{{order.email}}</td>
+                    <td>{{order.mobileNumber}}</td>
+                    <td>{{order.street}}, {{order.additionalInfo}}<br> Landmark - {{order.landmark}}</td>
+                    <td>{{order.district}}</td>
+                    <td>{{order.state}}</td>
+                    <td>{{order.country}}</td>
+                    <td>{{order.additionalMobile}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

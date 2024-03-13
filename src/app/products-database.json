@@ -1,0 +1,85 @@
+{
+    "Products": [
+      {
+        "id": "1",
+        "productName":"Mi 11 X",
+        "category":"mobile",
+        "price":"25000",
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyPLwes6sHfVYyx6LRxFaGJVFBWjx335N4dnwEHqKISLnKVJkvDB-eFtttnTlKSe3dRSg&usqp=CAU",
+        "stock":"30",
+        "rating":"4.2",
+        "description":"Qualcomm SM8250-AC Snapdragon 870 5G (7 nm)"
+      },
+      {
+        "id": "2",
+        "productName":"Hp Probook",
+        "category":"laptop",
+        "price":"62500",
+        "image":"https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/c/0/c08182657_1.png",
+        "stock":"20",
+        "rating":"2.4",
+        "description":"HP ProBook 450 (15.6) 39.62 cm G9 Business Laptop PC. 8 GB DDR4 512 GB SSD Solid State Drive"
+      },
+      {
+        "id": "3",
+        "productName":"Mi smart watch",
+        "category":"smartwatch",
+        "price":"4000",
+        "image":"https://m.media-amazon.com/images/I/6152wS4BKxL._AC_UF1000,1000_QL80_.jpg",
+        "stock":"20",
+        "rating":"3.8",
+        "description":"HP ProBook 450 (15.6) 39.62 cm G9 Business Laptop PC. 8 GB DDR4 512 GB SSD Solid State Drive"
+      },
+      {
+        "id": "4",
+        "productName":"realme Buds N100",
+        "category":"neckband",
+        "price":"1500",
+        "image":"https://m.media-amazon.com/images/I/31NJU1xDaNL._AC_UF1000,1000_QL80_.jpg",
+        "stock":"20",
+        "rating":"4.1",
+        "description":"Wireless Pro can play audio at 50% volume and AAC quality for 16hrs with Noise Cancellation on, 22hrs with Noise Cancellation off"
+      },
+
+      {
+        "id": "5",
+        "productName":"Mi 11 X",
+        "category":"mobile",
+        "price":"25000",
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyPLwes6sHfVYyx6LRxFaGJVFBWjx335N4dnwEHqKISLnKVJkvDB-eFtttnTlKSe3dRSg&usqp=CAU",
+        "stock":"30",
+        "rating":"2.7",
+        "description":"Qualcomm SM8250-AC Snapdragon 870 5G (7 nm)"
+      },
+      {
+        "id": "6",
+        "productName":"Hp Probook",
+        "category":"laptop",
+        "price":"62500",
+        "image":"https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/c/0/c08182657_1.png",
+        "stock":"20",
+        "rating":"3.9",
+        "description":"HP ProBook 450 (15.6) 39.62 cm G9 Business Laptop PC. 8 GB DDR4 512 GB SSD Solid State Drive"
+      },
+      {
+        "id": "7",
+        "productName":"Mi smart watch",
+        "category":"smartwatch",
+        "price":"4000",
+        "image":"https://m.media-amazon.com/images/I/6152wS4BKxL._AC_UF1000,1000_QL80_.jpg",
+        "stock":"20",
+        "rating":"3.8",
+        "description":"HP ProBook 450 (15.6) 39.62 cm G9 Business Laptop PC. 8 GB DDR4 512 GB SSD Solid State Drive"
+      },
+      {
+        "id": "8",
+        "productName":"realme Buds N100",
+        "category":"neckband",
+        "price":"1500",
+        "image":"https://m.media-amazon.com/images/I/31NJU1xDaNL._AC_UF1000,1000_QL80_.jpg",
+        "stock":"20",
+        "rating":"2.1",
+        "description":"Wireless Pro can play audio at 50% volume and AAC quality for 16hrs with Noise Cancellation on, 22hrs with Noise Cancellation off"
+      }
+    ]
+  }

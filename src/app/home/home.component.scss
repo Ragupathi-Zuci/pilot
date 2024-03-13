@@ -1,0 +1,51 @@
+
+.search-container {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.input-group{
+    width: 100%;
+}
+.whole-card{
+    padding: 30px;
+}
+.card-custom {
+    height: 100%;
+}
+
+.card-img-top{
+    width: 250px;
+    height: 240px; 
+    padding: 10px 10px 0px 10px;
+    padding-left: 50px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+.prices{
+    color: red;
+    font-weight: 600;
+}
+.add-to-cart-icon{
+    padding-right: 10px;
+}
+
+
+.card-body {
+    position: relative;
+    padding-bottom: 50px; 
+}
+
+.add-to-cart-button {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; 
+}
+

@@ -1,0 +1,136 @@
+<!-- <div class="whole-body">
+    <app-navbar (searchedProductsEmitter)="handleSearchedProducts($event)"></app-navbar>
+
+
+    <section>
+        <div class="container py-5">
+            <div class="row justify-content-center"
+                *ngIf="searchedProducts && searchedProducts.length > 0; else allProductsSection">
+                <div class="whole-card col-md-8 col-lg-6 col-xl-4" *ngFor="let product of searchedProducts">
+                    <div class="card text-black card-custom">
+                        <img src="{{product.image}}" class="card-img-top image-custom" alt="Product Image" />
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h5 class="card-title">{{product.productName}}</h5>
+                                <p class="text-muted mb-4">{{product.description}}</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <div class="d-flex justify-content-around">
+                                    <span>Rating</span><span>{{product.rating}}</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around price font-weight-bold mt-4">
+                                <span>Price</span><span class="prices">₹{{product.price}}</span>
+                            </div>
+                            <div class="d-flex justify-content-around total font-weight-bold mt-4">
+                                <button class="btn btn-primary"><i class="add-to-cart-icon fa fa-shopping-cart"></i>Add
+                                    to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ng-template #allProductsSection>
+                <div class="row justify-content-center">
+                    <div class="whole-card col-md-8 col-lg-6 col-xl-4" *ngFor="let product of allProducts">
+                        <div class="card text-black card-custom">
+                            <img src="{{product.image}}" class="card-img-top image-custom" alt="Product Image" />
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h5 class="card-title">{{product.productName}}</h5>
+                                    <p class="text-muted mb-4">{{product.description}}</p>
+                                </div>
+                                <hr>
+                                <div>
+                                    <div class="d-flex justify-content-around">
+                                        <span>Rating</span><span>{{product.rating}}</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-around price font-weight-bold mt-4">
+                                    <span>Price</span><span class="prices">₹{{product.price}}</span>
+                                </div>
+                                <div class="d-flex justify-content-around add-to-cart font-weight-bold mt-4">
+                                    <button class="btn btn-primary add-to-cart-button" (click)="addToCart(product)"><i class="add-to-cart-icon fa fa-shopping-cart"></i>Add
+                                        to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+
+        </div>
+    </section>  
+</div> -->
+
+
+
+
+<div class="whole-body">
+    <app-navbar (searchedProductsEmitter)="handleSearchedProducts($event)"></app-navbar>
+
+
+    <section>
+        <div class="container py-5">
+            <div class="row justify-content-center"
+                *ngIf="searchedProducts && searchedProducts.length > 0; else allProductsSection">
+                <div class="whole-card col-md-8 col-lg-6 col-xl-4" *ngFor="let product of searchedProducts">
+                    <div class="card text-black card-custom">
+                        <img src="{{product.image}}" class="card-img-top image-custom" alt="Product Image" />
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h5 class="card-title">{{product.productName}}</h5>
+                                <p class="text-muted mb-4">{{product.description}}</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <div class="d-flex justify-content-around">
+                                    <span>Rating</span><span>{{product.rating}}</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around price font-weight-bold mt-4">
+                                <span>Price</span><span class="prices">₹{{product.price}}</span>
+                            </div>
+                            <div class="d-flex justify-content-around total font-weight-bold mt-4">
+                                <button class="btn btn-primary"><i class="add-to-cart-icon fa fa-shopping-cart"></i>Add
+                                    to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ng-template #allProductsSection>
+                <div class="row justify-content-center">
+                    <div class="whole-card col-md-8 col-lg-6 col-xl-4" *ngFor="let product of allProducts">
+                        <div class="card text-black card-custom">
+                            <img src="{{product.image}}" class="card-img-top image-custom" alt="Product Image" />
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h5 class="card-title">{{product.productName}}</h5>
+                                    <p class="text-muted mb-2">{{product.description}}</p>
+                                </div>
+                                <hr>
+                                <div>
+                                    <div class="d-flex justify-content-around">
+                                        <ng-container *ngFor="let star of getStars(product.rating)">
+                                            <i class="fa" [ngClass]="{'fa-star': star === 'full', 'fa-star-half-alt': star === 'half', 'fa-star-o': star === 'empty'}" aria-hidden="true"></i>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-around price font-weight-bold mt-3">
+                                    <span>Price</span><span class="prices">₹{{product.price}}</span>
+                                </div>
+                                <div class="d-flex justify-content-around add-to-cart font-weight-bold mt-4">
+                                    <button class="btn btn-primary add-to-cart-button" (click)="addToCart(product)"><i class="add-to-cart-icon fa fa-shopping-cart"></i>Add
+                                        to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+
+        </div>
+    </section>  
+</div>

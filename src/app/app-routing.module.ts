@@ -1,7 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CartComponent } from './cart/cart.component';
+import { PlaceTheOrderComponent } from './place-the-order/place-the-order.component';
+import { LoginComponent } from './login/login.component';
+import { PaymentSuccessComponent } from './payment-success/payment-success.component';
+import { SignupComponent } from './signup/signup.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'navbar', component: NavbarComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'order',component:PlaceTheOrderComponent},
+  { path: 'login', component:LoginComponent},
+  { path: 'paymentSuccess', component:PaymentSuccessComponent},
+  { path:'signup', component:SignupComponent},
+  { path:'adminLogin', component:AdminLoginComponent},
+  { path:'adminHome', component:AdminHomeComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'prefix' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

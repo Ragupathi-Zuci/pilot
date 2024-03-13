@@ -1,0 +1,22 @@
+{
+  "orders": [
+    {
+      "id": "2a54",
+      "firstName": "siva",
+      "lastName": "R",
+      "email": "siva@gmail.com",
+      "mobileNumber": "1234567890",
+      "cardNumber": "12345678901234",
+      "cardHolderName": "siva",
+      "street": "udumalapet",
+      "additionalInfo": "Avanthika",
+      "pinCode": "641667",
+      "landmark": "railway station",
+      "district": "tiruppur",
+      "state": "Tamilnadu",
+      "country": "India",
+      "additionalMobile": "9078563412",
+      "termsAndConditions": true
+    }
+  ]
+}
