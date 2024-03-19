@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,10 +11,12 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   email: string = '';
   password: string = '';
+  loginError: string = '';
+  isFormValid: boolean = false;
 
   constructor(private router: Router, private http: HttpClient) {}
 
-  login(): void {
+  login(loginForm: NgForm): void {
     if (this.email && this.password) {
       this.http.get<any[]>('http://localhost:3002/users').subscribe(data => {
         const user = data.find(user => {
@@ -24,11 +27,13 @@ export class LoginComponent {
           localStorage.setItem('email', this.email);
           this.router.navigate(['/home']);
         } else {
-          console.error('Invalid email/phone or password');
+          console.log('Invalid email or password');
+          this.loginError = 'Invalid email or password';
         }
       });
     } else {
-      console.error('Email/phone and password are required');
+      console.log('Form is invalid');
+      this.loginError = 'Please fill in all required fields';
     }
   }
 }

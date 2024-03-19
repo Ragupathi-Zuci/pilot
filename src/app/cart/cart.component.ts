@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CartService } from '../services/cart.service';
+import { UpdateCartService } from '../services/update-cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -8,9 +9,11 @@ import { CartService } from '../services/cart.service';
 })
 export class CartComponent implements OnInit {
   cartItems: any[] = [];
-  total=0;
+  total = 0;
 
-  constructor(private cartService: CartService) { }
+
+
+  constructor(private cartService: CartService, private UpdateCartService: UpdateCartService) { }
 
   ngOnInit() {
     this.cartService.getCartItems().subscribe(items => {
@@ -18,31 +21,31 @@ export class CartComponent implements OnInit {
     });
   }
 
-  getTotalPrice(): number {
-    return this.cartItems.reduce((total, item) => total + parseFloat(item.price), 0);
-  }
-  
   getTotalPriceWithTaxes(): number {
     const subtotal = this.getTotalPrice();
-    const sgst = 0.06 * subtotal; // SGST rate is 6%
-    const cgst = 0.06 * subtotal; // CGST rate is 6%
+    const sgst = 0.06 * subtotal;
+    const cgst = 0.06 * subtotal;
     const total = subtotal + sgst + cgst;
     // this.total=total;
     return total;
-  } 
+  }
+
+  getTotalPrice(): number {
+    return this.cartItems.reduce((total, item) => total + parseFloat(item.price), 0);
+  }
 
   removeItem(index: number) {
-    this.cartItems.splice(index, 1); 
-    console.log(this.cartItems)
+    this.cartItems.splice(index, 1);
     const subtotal = this.getTotalPrice();
-    const sgst = 0.06 * subtotal; 
-    const cgst = 0.06 * subtotal; 
+    const sgst = 0.06 * subtotal;
+    const cgst = 0.06 * subtotal;
     const total = subtotal + sgst + cgst;
-    this.total=total;
-    
-    console.log(this.total);
+    this.total = total;
+    this.UpdateCartService.sendUpdatedCartItems(this.cartItems);
+    this.UpdateCartService.sendUpdatedBill(this.total);
+
   }
-  
+
 
 
 }

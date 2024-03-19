@@ -181,3 +181,12 @@ input[type="submit"]:hover {
 .signup a:hover {
     text-decoration: underline;
 }
+
+
+.login-error {
+    padding-top: 5px;
+    border-color: red;
+    color: red;
+    font-size: large;
+}
+

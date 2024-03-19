@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -14,6 +13,8 @@ import { PaymentSuccessComponent } from './payment-success/payment-success.compo
 import { SignupComponent } from './signup/signup.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { AdminProductViewComponent } from './admin-product-view/admin-product-view.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -27,14 +28,16 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
     PaymentSuccessComponent,
     SignupComponent,
     AdminLoginComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    AdminProductViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalModule.forRoot(),
 
   ],
   providers: [],

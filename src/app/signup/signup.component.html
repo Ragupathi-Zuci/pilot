@@ -1,4 +1,4 @@
-<div class="bg-img">
+<!-- <div class="bg-img">
     <div class="content">
         <header>Signup Form</header>
         <form>
@@ -28,6 +28,52 @@
             </div>
             <div class="signup">Don't have account?
                 <a [routerLink]="['/login']" routerLinkActive="router-link-active" >Login Now</a>
+            </div>
+        </form>
+    </div>
+</div> -->
+
+
+
+
+
+
+<div class="bg-img">
+    <div class="content">
+        <header>Signup Form</header>
+        <form [formGroup]="signupForm" (ngSubmit)="addUser()">
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="text" formControlName="email" placeholder="Email or Phone">
+                <div *ngIf="signupForm.get('email')?.errors && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)" class="error-message">
+                    <span *ngIf="signupForm.get('email')?.errors?.['required']" style="color: red;">Required</span>
+                    <span *ngIf="signupForm.get('email')?.errors?.['email']" style="color: red;">Invalid email</span>
+                </div>
+            </div>
+            <div class="field space">
+                <span class="fa fa-lock"></span>
+                <input type="password" formControlName="password" placeholder="Password">
+                <div *ngIf="signupForm.get('password')?.errors?.['required'] && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)" class="error-message" >
+                    <span  style="color: red;"> Required</span>
+                </div>
+            </div>
+            <div class="pass">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <div class="field">
+                <input type="submit" value="SIGNUP" [disabled]="signupForm.invalid">
+            </div>
+            <div class="login">Or signup with</div>
+            <div class="link">
+                <div class="facebook">
+                    <i class="fab fa-facebook-f"><span>Facebook</span></i>
+                </div>
+                <div class="instagram">
+                    <i class="fab fa-instagram"><span>Instagram</span></i>
+                </div>
+            </div>
+            <div class="signup">Don't have an account?
+                <a [routerLink]="['/login']" routerLinkActive="router-link-active">Login Now</a>
             </div>
         </form>
     </div>

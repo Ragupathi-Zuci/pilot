@@ -41,12 +41,10 @@ export class NavbarComponent {
   }
   logout():void{
     localStorage.clear();
-    // window.location.reload();
     this.email='Login' 
   }
 
   displayProducts() {
-    console.log("entered in to function");
     this.productService.getProducts().subscribe((data: {}) => {
       this.allProducts = data;
     })
@@ -61,11 +59,11 @@ export class NavbarComponent {
         if (this.searchForm.controls['searchText'].value.length > 1) {
           const searchedProducts = this.allProducts?.filter((b: { category: string; }) => b.category.toLowerCase().startsWith(event.target.value));
           console.log('searchedProducts', searchedProducts);
-          this.searchedProductsEmitter.emit(searchedProducts); // Emit the searchedProducts array
+          this.searchedProductsEmitter.emit(searchedProducts); 
         }
         if (this.searchForm.controls['searchText'].value.length == 0) {
           const searchedProducts = this.displayProducts();
-          this.searchedProductsEmitter.emit(searchedProducts); // Emit the searchedProducts array
+          this.searchedProductsEmitter.emit(searchedProducts); 
         }
       });
   }

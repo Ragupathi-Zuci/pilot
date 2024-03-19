@@ -12,4 +12,6 @@ export interface Orders {
     country: string;
     additionalMobile: string;
     termsAndConditions: boolean;
+    updatedCartItems?:any;
+    updatedBill?: any;
 }

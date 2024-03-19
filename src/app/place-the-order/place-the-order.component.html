@@ -1,3 +1,4 @@
+
 <div class="whole-body">
   <app-navbar></app-navbar>
 
@@ -9,56 +10,52 @@
             <div class="card card-registration card-registration-2 mb-4" style="border-radius: 15px;">
               <div class="card-body p-0">
                 <div class="row g-0">
-                  <form class="allform">
+                  <form class="allform" #orderForm="ngForm">
                     <div class="col-lg-6">
                       <div class="p-5">
                         <h3 class="text-primary fw-normal mb-5">General Information</h3>
                         <div class="row">
                           <div class="col-md-6 mb-4 pb-2">
                             <div class="form-outline">
-                              <input type="text" class="form-control form-control-lg"
-                                placeholder="First name"  [(ngModel)]="orderDetails.firstName" [ngModelOptions]="{standalone: true}"/>
-                              <div *ngIf="formControls['firstName'].invalid && formControls['firstName'].touched"
-                                class="text-danger">
-                                First name is required.
+                              <input type="text" class="form-control form-control-lg" name="firstName" placeholder="First name"
+                                     [(ngModel)]="orderDetails.firstName" [ngModelOptions]="{standalone: true}" required />
+                              <div *ngIf="(orderForm.submitted && !orderDetails.firstName)" class="text-danger">
+                                First name is required
                               </div>
                             </div>
                           </div>
                           <div class="col-md-6 mb-4 pb-2">
                             <div class="form-outline">
-                              <input type="text" class="form-control form-control-lg"
-                                placeholder="Last name"  [(ngModel)]="orderDetails.lastName" [ngModelOptions]="{standalone: true}"/>
-                              <div *ngIf="formControls['lastName'].invalid && formControls['lastName'].touched"
-                                class="text-danger">
-                                Last name is required.
+                              <input type="text" class="form-control form-control-lg" name="lastName" placeholder="Last name"
+                                     [(ngModel)]="orderDetails.lastName" required />
+                              <div *ngIf="orderForm.submitted && !orderDetails.lastName" class="text-danger">
+                                First name is required
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="mb-4 pb-2">
                           <div class="form-outline">
-                            <input type="email"  class="form-control form-control-lg"
-                              placeholder="Your email"  [(ngModel)]="orderDetails.email" [ngModelOptions]="{standalone: true}"/>
-                            <div *ngIf="formControls['email'].invalid && formControls['email'].touched"
-                              class="text-danger">
-                              Please enter a valid email address.
+                            <input type="email" class="form-control form-control-lg" placeholder="Your email" name="email"
+                              [(ngModel)]="orderDetails.email" required/>
+                            <div *ngIf="orderForm.submitted && !orderDetails.email" class="text-danger">
+                              Email is required
                             </div>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-md-12 mb-4 pb-2">
                             <div class="form-outline">
-                              <input type="text"  class="form-control form-control-lg"
-                                placeholder="Mobile number"  [(ngModel)]="orderDetails.mobileNumber" [ngModelOptions]="{standalone: true}"/>
-                              <div *ngIf="formControls['mobileNumber'].invalid && formControls['mobileNumber'].touched"
-                                class="text-danger">
-                                Please enter a valid 10-digit mobile number.
+                              <input type="tel" class="form-control form-control-lg" placeholder="Mobile number" name="mobileNumber"
+                                [(ngModel)]="orderDetails.mobileNumber" required />
+                              <div *ngIf="orderForm.submitted && !orderDetails.mobileNumber" class="text-danger">
+                                Mobile number is required
                               </div>
                             </div>
                           </div>
                         </div>
                         <hr>
-
+                        
 
                         <section class="">
                           <div class="container ">
@@ -67,12 +64,15 @@
                               <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
                                 <div class="card gradient-custom" style="border-radius: 15px;">
                                   <div class="card-body p-4">
-                                    <!-- <form> -->
+
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                       <div class="form-outline">
-                                        <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
-                                          placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" [(ngModel)]="orderDetails.cardNumber" [ngModelOptions]="{standalone: true}"/>
-                                        <label class="form-label" for="typeText">Card Number</label>
+                                        <input type="text" id="typeText" class="form-control form-control-lg" size="17"
+                                               placeholder="1234 5678 9012 3457" minlength="19" maxlength="19"
+                                               [(ngModel)]="orderDetails.cardNumber" [ngModelOptions]="{standalone: true}" required name="cardNumber"/>
+                                        <div *ngIf="orderForm.submitted && !orderDetails.cardNumber" class="text-danger">
+                                          Card number is required
+                                        </div>
                                       </div>
                                       <img src="https://img.icons8.com/color/48/000000/visa.png" alt="visa"
                                         width="64px" />
@@ -81,8 +81,12 @@
                                     <div class="d-flex justify-content-between align-items-center mb-4">
                                       <div class="form-outline">
                                         <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
-                                          placeholder="Cardholder's Name" [(ngModel)]="orderDetails.cardHolderName" [ngModelOptions]="{standalone: true}" />
+                                          placeholder="Cardholder's Name" [(ngModel)]="orderDetails.cardHolderName"
+                                          [ngModelOptions]="{standalone: true}" name="cardHolderName"/>
                                         <label class="form-label" for="typeName">Cardholder's Name</label>
+                                        <div *ngIf="orderForm.submitted && !orderDetails.cardHolderName" class="text-danger">
+                                          Card Holder Name is required
+                                        </div>
                                       </div>
                                     </div>
 
@@ -102,7 +106,7 @@
                                         <i class="fas fa-arrow-right "></i>
                                       </button>
                                     </div>
-                                    <!-- </form> -->
+
                                   </div>
                                 </div>
                               </div>
@@ -121,14 +125,19 @@
                         <div class="mb-4 pb-2">
                           <div class="form-outline form-white">
                             <input type="text" id="form3Examplea2" class="form-control form-control-lg"
-                              placeholder="Street" [(ngModel)]="orderDetails.street" [ngModelOptions]="{standalone: true}"/>
+                              placeholder="Street" [(ngModel)]="orderDetails.street"
+                              [ngModelOptions]="{standalone: true}" name="street"/>
+                              <div *ngIf="orderForm.submitted && !orderDetails.street" class="text-danger">
+                                Street is required
+                              </div>
                           </div>
                         </div>
 
                         <div class="mb-4 pb-2">
                           <div class="form-outline form-white">
                             <input type="text" id="form3Examplea3" class="form-control form-control-lg"
-                              placeholder="Additional Information" [(ngModel)]="orderDetails.additionalInfo" [ngModelOptions]="{standalone: true}"/>
+                              placeholder="Additional Information" [(ngModel)]="orderDetails.additionalInfo"
+                              [ngModelOptions]="{standalone: true}" name="additionalInfo" />
                           </div>
                         </div>
 
@@ -136,13 +145,15 @@
                           <div class="col-md-5 mb-4 pb-2">
                             <div class="form-outline form-white">
                               <input type="text" id="form3Examplea4" class="form-control form-control-lg"
-                                placeholder="Pin Code" [(ngModel)]="orderDetails.pinCode" [ngModelOptions]="{standalone: true}"/>
+                                placeholder="Pin Code" [(ngModel)]="orderDetails.pinCode"
+                                [ngModelOptions]="{standalone: true}" name="pinCode"/>
                             </div>
                           </div>
                           <div class="col-md-7 mb-4 pb-2">
                             <div class="form-outline form-white">
                               <input type="text" id="form3Examplea5" class="form-control form-control-lg"
-                                placeholder="Landmark" [(ngModel)]="orderDetails.landmark" [ngModelOptions]="{standalone: true}"/>
+                                placeholder="Landmark" [(ngModel)]="orderDetails.landmark"
+                                [ngModelOptions]="{standalone: true}"  name="landmark"/>
                             </div>
                           </div>
                         </div>
@@ -151,13 +162,15 @@
                           <div class="col-md-5 mb-4 pb-2">
                             <div class="form-outline form-white">
                               <input type="text" id="form3Examplea7" class="form-control form-control-lg"
-                                placeholder="District" [(ngModel)]="orderDetails.district" [ngModelOptions]="{standalone: true}"/>
+                                placeholder="District" [(ngModel)]="orderDetails.district"
+                                [ngModelOptions]="{standalone: true}" name="district"/>
                             </div>
                           </div>
                           <div class="col-md-7 mb-4 pb-2">
                             <div class="form-outline form-white">
                               <input type="text" id="form3Examplea8" class="form-control form-control-lg"
-                                placeholder="State" [(ngModel)]="orderDetails.state" [ngModelOptions]="{standalone: true}"  />
+                                placeholder="State" [(ngModel)]="orderDetails.state"
+                                [ngModelOptions]="{standalone: true}" name="state"/>
                             </div>
                           </div>
                         </div>
@@ -165,13 +178,15 @@
                         <div class="mb-4 pb-2">
                           <div class="form-outline form-white">
                             <input type="text" id="form3Examplea6" class="form-control form-control-lg"
-                              placeholder="Country" [(ngModel)]="orderDetails.country" [ngModelOptions]="{standalone: true}"/>
+                              placeholder="Country" [(ngModel)]="orderDetails.country"
+                              [ngModelOptions]="{standalone: true}" name="country"/>
                           </div>
                         </div>
                         <div class="mb-4">
                           <div class="form-outline form-white">
                             <input type="text" id="form3Examplea9" class="form-control form-control-lg"
-                              placeholder="Additional Mobile number" [(ngModel)]="orderDetails.additionalMobile" [ngModelOptions]="{standalone: true}"/>
+                              placeholder="Additional Mobile number" [(ngModel)]="orderDetails.additionalMobile"
+                              [ngModelOptions]="{standalone: true}" name="additionalMobile"/>
                           </div>
                         </div>
                         <div class="form-check d-flex justify-content-start mb-4 pb-3">
@@ -180,7 +195,8 @@
                             I do accept the <a class="text-white"><u>Terms and Conditions</u></a> of your site.
                           </label>
                         </div>
-                        <button type="button" class="btn btn-light btn-lg " data-mdb-ripple-color="dark"  (click) = "addOrder(orderDetails)">Pay</button>
+                        <button type="button" class="btn btn-light btn-lg " data-mdb-ripple-color="dark"
+                          (click)="addOrder()" [disabled]="orderForm.invalid">Pay</button>
                       </div>
 
                     </div>
@@ -195,207 +211,3 @@
     </section>
   </div>
 </div>
-
-
-
-<!-- ------------------------------------------------------------------------------ -->
-
-
-
-
-<!-- 
-<div class="whole-body">
-    <app-navbar></app-navbar>
-  
-    <div class="body">
-      <section class="h-100 h-custom gradient-custom-2">
-        <div class="container py-5 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12">
-              <div class="card card-registration card-registration-2" style="border-radius: 15px;">
-                <div class="card-body p-0">
-                  <form [formGroup]="orderForm">
-                    <div class="row g-0">
-                      <div class="col-lg-6">
-                        <div class="p-5">
-                          <h3 class="text-primary fw-normal mb-5">General Information</h3>
-                          <div class="row">
-                            <div class="col-md-6 mb-4 pb-2">
-                              <div class="form-outline">
-                                <input type="text" formControlName="firstName" class="form-control form-control-lg" placeholder="First name" />
-                                <div *ngIf="formControls['firstName'].invalid && formControls['firstName'].touched" class="text-danger">
-                                  First name is required.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-6 mb-4 pb-2">
-                              <div class="form-outline">
-                                <input type="text" formControlName="lastName" class="form-control form-control-lg" placeholder="Last name" />
-                                <div *ngIf="formControls['lastName'].invalid && formControls['lastName'].touched" class="text-danger">
-                                  Last name is required.
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="mb-4 pb-2">
-                            <div class="form-outline">
-                              <input type="email" formControlName="email" class="form-control form-control-lg" placeholder="Your email" />
-                              <div *ngIf="formControls['email'].invalid && formControls['email'].touched" class="text-danger">
-                                Please enter a valid email address.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-12 mb-4 pb-2">
-                              <div class="form-outline">
-                                <input type="text" formControlName="mobileNumber" class="form-control form-control-lg" placeholder="Mobile number" />
-                                <div *ngIf="formControls['mobileNumber'].invalid && formControls['mobileNumber'].touched" class="text-danger">
-                                  Please enter a valid 10-digit mobile number.
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <hr>
-                          <section class="">
-                            <div class="container ">
-                              <div class="row d-flex justify-content-center ">
-                                <h3 class="text-primary fw-normal mb-3">Payment</h3>
-                                <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-                                  <div class="card gradient-custom" style="border-radius: 15px;">
-                                    <div class="card-body p-4">
-                                      <form>
-                                        <div class="d-flex justify-content-between align-items-center mb-3">
-                                          <div class="form-outline">
-                                            <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
-                                              placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
-                                            <label class="form-label" for="typeText">Card Number</label>
-                                          </div>
-                                          <img src="https://img.icons8.com/color/48/000000/visa.png" alt="visa" width="64px" />
-                                        </div>
-                          
-                                        <div class="d-flex justify-content-between align-items-center mb-4">
-                                          <div class="form-outline">
-                                            <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
-                                              placeholder="Cardholder's Name" />
-                                            <label class="form-label" for="typeName">Cardholder's Name</label>
-                                          </div>
-                                        </div>
-                          
-                                        <div class="d-flex justify-content-between align-items-center pb-2">
-                                          <div class="form-outline">
-                                            <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="MM/YYYY"
-                                              size="7" id="exp" minlength="7" maxlength="7" />
-                                            <label class="form-label" for="typeExp">Expiration</label>
-                                          </div>
-                                          <div class="form-outline">
-                                            <input type="password" id="typeText2" class="form-control form-control-lg"
-                                              placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
-                                            <label class="form-label" for="typeText2">Cvv</label>
-                                          </div>
-                                          <button type="button" class="btn btn-light btn-lg btn-rounded"  >
-                                            <i class="fas fa-arrow-right "></i>
-                                          </button>
-                                        </div>
-                                      </form>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </section>
-                        </div>
-                      </div>
-  
-                      <div class="col-lg-6 bg-indigo text-white" id="Shipping">
-                        <div class="p-5">
-                          <h3 class="fw-normal mb-5">Shipping Details</h3>
-  
-                          <div class="mb-4 pb-2">
-                              <div class="form-outline form-white">
-                                  <input type="text" formControlName="street" class="form-control form-control-lg" placeholder="Street" />
-                                  <div *ngIf="formControls['street'].invalid && formControls['street'].touched" class="text-danger">
-                                      Street is required.
-                                  </div>
-                              </div>
-                          </div>
-  
-                          <div class="mb-4 pb-2">
-                              <div class="form-outline form-white">
-                                  <input type="text" formControlName="additionalInfo" class="form-control form-control-lg" placeholder="Additional Information" />
-                              </div>
-                          </div>
-  
-                          <div class="row">
-                              <div class="col-md-5 mb-4 pb-2">
-                                  <div class="form-outline form-white">
-                                      <input type="text" formControlName="pinCode" class="form-control form-control-lg" placeholder="Pin Code" />
-                                      <div *ngIf="formControls['pinCode'].invalid && formControls['pinCode'].touched" class="text-danger">
-                                          Please enter a valid pin code.
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-md-7 mb-4 pb-2">
-                                  <div class="form-outline form-white">
-                                      <input type="text" formControlName="landmark" class="form-control form-control-lg" placeholder="Landmark" />
-                                      <div *ngIf="formControls['landmark'].invalid && formControls['landmark'].touched" class="text-danger">
-                                        Landmark is required.
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-  
-                          <div class="row">
-                              <div class="col-md-5 mb-4 pb-2">
-                                  <div class="form-outline form-white">
-                                      <input type="text" formControlName="district" class="form-control form-control-lg" placeholder="District" />
-                                      <div *ngIf="formControls['district'].invalid && formControls['district'].touched" class="text-danger">
-                                        District is required.
-                                    </div>
-                                  </div>
-                              </div>
-                              <div class="col-md-7 mb-4 pb-2">
-                                  <div class="form-outline form-white">
-                                      <input type="text" formControlName="state" class="form-control form-control-lg" placeholder="State" />
-                                      <div *ngIf="formControls['state'].invalid && formControls['state'].touched" class="text-danger">
-                                        State is required.
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-  
-                          <div class="mb-4 pb-2">
-                              <div class="form-outline form-white">
-                                  <input type="text" formControlName="country" class="form-control form-control-lg" placeholder="Country" />
-                                  <div *ngIf="formControls['country'].invalid && formControls['country'].touched" class="text-danger">
-                                    Country is required.
-                                </div>
-                              </div>
-                          </div>
-  
-                          <div class="mb-4">
-                              <div class="form-outline form-white">
-                                  <input type="text" formControlName="additionalMobile" class="form-control form-control-lg" placeholder="Additional Mobile number" />
-                              </div>
-                          </div>
-  
-                          <div class="form-check d-flex justify-content-start mb-4 pb-3">
-                              <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c"  />
-                              <label class="form-check-label text-white" for="form2Example3">
-                                  I do accept the <a class="text-white"><u>Terms and Conditions</u></a> of your site.
-                              </label>
-                          </div>
-  
-                          <button type="submit" class="btn btn-light btn-lg " data-mdb-ripple-color="dark"  [disabled]="orderForm.invalid">Pay</button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
- -->

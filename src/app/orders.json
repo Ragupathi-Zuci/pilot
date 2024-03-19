@@ -1,22 +1,86 @@
 {
   "orders": [
     {
-      "id": "2a54",
-      "firstName": "siva",
-      "lastName": "R",
-      "email": "siva@gmail.com",
-      "mobileNumber": "1234567890",
-      "cardNumber": "12345678901234",
-      "cardHolderName": "siva",
-      "street": "udumalapet",
-      "additionalInfo": "Avanthika",
+      "id": "066b",
+      "firstName": "Ragu",
+      "lastName": "p",
+      "email": "ragu@gmail.com",
+      "mobileNumber": "9087654321",
+      "cardNumber": "1234567890123456",
+      "cardHolderName": "Ragu",
+      "street": "pongalur",
+      "additionalInfo": "bus stop",
       "pinCode": "641667",
-      "landmark": "railway station",
+      "landmark": "Government school",
       "district": "tiruppur",
+      "state": "tamilnadu",
+      "country": "india",
+      "additionalMobile": "9078563412",
+      "termsAndConditions": true,
+      "updatedCartItems": [
+        {
+          "id": "3",
+          "productName": "Mi smart watch",
+          "category": "smartwatch",
+          "price": "4000",
+          "image": "https://m.media-amazon.com/images/I/6152wS4BKxL._AC_UF1000,1000_QL80_.jpg",
+          "stock": "20",
+          "rating": "3.8",
+          "description": "HP ProBook 450 (15.6) 39.62 cm G9 Business Laptop PC. 8 GB DDR4 512 GB SSD Solid State Drive"
+        },
+        {
+          "id": "3",
+          "productName": "Mi smart watch",
+          "category": "smartwatch",
+          "price": "4000",
+          "image": "https://m.media-amazon.com/images/I/6152wS4BKxL._AC_UF1000,1000_QL80_.jpg",
+          "stock": "20",
+          "rating": "3.8",
+          "description": "HP ProBook 450 (15.6) 39.62 cm G9 Business Laptop PC. 8 GB DDR4 512 GB SSD Solid State Drive"
+        }
+      ],
+      "updatedBill": 8960
+    },
+    {
+      "id": "fef2",
+      "firstName": "Keerthana",
+      "lastName": "R",
+      "email": "keerthana@gmail.com",
+      "mobileNumber": "8097654321",
+      "cardNumber": "1234123412341234",
+      "cardHolderName": "Keerthana",
+      "street": "thindal",
+      "additionalInfo": "vellolar college",
+      "pinCode": "641667",
+      "landmark": "thindal",
+      "district": "Erode",
       "state": "Tamilnadu",
       "country": "India",
-      "additionalMobile": "9078563412",
-      "termsAndConditions": true
+      "additionalMobile": "9980765432",
+      "termsAndConditions": true,
+      "updatedCartItems": [
+        {
+          "id": "4",
+          "productName": "realme Buds N100",
+          "category": "neckband",
+          "price": "1500",
+          "image": "https://m.media-amazon.com/images/I/31NJU1xDaNL._AC_UF1000,1000_QL80_.jpg",
+          "stock": "20",
+          "rating": "4.1",
+          "description": "Wireless Pro can play audio at 50% volume and AAC quality for 16hrs with Noise Cancellation on, 22hrs with Noise Cancellation off"
+        },
+        {
+          "id": "7",
+          "productName": "Mi smart watch",
+          "category": "smartwatch",
+          "price": "4000",
+          "image": "https://m.media-amazon.com/images/I/6152wS4BKxL._AC_UF1000,1000_QL80_.jpg",
+          "stock": "20",
+          "rating": "3.8",
+          "description": "HP ProBook 450 (15.6) 39.62 cm G9 Business Laptop PC. 8 GB DDR4 512 GB SSD Solid State Drive"
+        }
+      ],
+      "updatedBill": 6160
     }
   ]
 }
