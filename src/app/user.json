@@ -14,6 +14,26 @@
       "id": "4e8c",
       "email": "sample@gmail.com",
       "password": "sample"
+    },
+    {
+      "id": "4113",
+      "email": "ram@gmail.com",
+      "password": "ram"
+    },
+    {
+      "id": "9150",
+      "email": "ragu@gmail.com",
+      "password": "ragu"
+    },
+    {
+      "id": "22eb",
+      "email": "sivak@gmail.com",
+      "password": "sivak"
+    },
+    {
+      "id": "902c",
+      "email": "shree@gmail.com",
+      "password": "123456"
     }
   ]
 }

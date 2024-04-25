@@ -11,11 +11,13 @@ import { CartService } from '../services/cart.service';
 export class HomeComponent {
   allProducts: any = [];
   searchedProducts: any = []; 
+  
 
   constructor(private productService: ProductService, private fb: FormBuilder, private cdr: ChangeDetectorRef, private cartService:CartService) { }
 
   ngOnInit() {
     this.displayProducts();
+    
   }
   
   displayProducts() {
@@ -33,8 +35,17 @@ export class HomeComponent {
   }  
 
   addToCart(product: any) {
-    this.cartService.addToCart(product);
+    this.cartService.getCartItems().subscribe(cartItems => {
+      const existingItem = cartItems.find((item: any) => item.id === product.id);
+      if (!existingItem) {
+        this.cartService.addToCart(product);
+        product.addedToCart = true; 
+      }
+    });
   }
+  
+  
+  
 
   getStars(rating: number): ('full' | 'half' | 'empty')[] {
     const fullStarsCount = Math.floor(rating); 

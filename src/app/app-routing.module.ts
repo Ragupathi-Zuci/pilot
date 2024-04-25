@@ -9,17 +9,22 @@ import { PaymentSuccessComponent } from './payment-success/payment-success.compo
 import { SignupComponent } from './signup/signup.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { FooterComponent } from './footer/footer.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'navbar', component: NavbarComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'order',component:PlaceTheOrderComponent},
-  { path: 'login', component:LoginComponent},
-  { path: 'paymentSuccess', component:PaymentSuccessComponent},
+  { path: 'cart', component: CartComponent , canActivate: [AuthGuardService] },
+  { path: 'order',component:PlaceTheOrderComponent, canActivate: [AuthGuardService] },
+  { path: 'login', component:LoginComponent },
+  { path: 'paymentSuccess', component:PaymentSuccessComponent, canActivate: [AuthGuardService] },
   { path:'signup', component:SignupComponent},
   { path:'adminLogin', component:AdminLoginComponent},
   { path:'adminHome', component:AdminHomeComponent},
+  { path:'footer', component:FooterComponent},
+  { path:'myOrders', component:MyOrdersComponent},
   { path: '', redirectTo: 'home', pathMatch: 'prefix' }
 ];
 

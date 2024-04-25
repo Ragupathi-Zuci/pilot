@@ -15,6 +15,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminProductViewComponent } from './admin-product-view/admin-product-view.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { FooterComponent } from './footer/footer.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     SignupComponent,
     AdminLoginComponent,
     AdminHomeComponent,
-    AdminProductViewComponent
+    AdminProductViewComponent,
+    FooterComponent,
+    MyOrdersComponent
   ],
   imports: [
     BrowserModule,
