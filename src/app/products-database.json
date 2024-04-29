@@ -1,85 +1,204 @@
 {
-    "Products": [
-      {
-        "id": "1",
-        "productName":"Mi 11 X",
-        "category":"mobile",
-        "price":"25000",
-        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyPLwes6sHfVYyx6LRxFaGJVFBWjx335N4dnwEHqKISLnKVJkvDB-eFtttnTlKSe3dRSg&usqp=CAU",
-        "stock":"30",
-        "rating":"4.2",
-        "description":"Qualcomm SM8250-AC Snapdragon 870 5G (7 nm)"
-      },
-      {
-        "id": "2",
-        "productName":"Hp Probook",
-        "category":"laptop",
-        "price":"62500",
-        "image":"https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/c/0/c08182657_1.png",
-        "stock":"20",
-        "rating":"2.4",
-        "description":"HP ProBook 450 (15.6) 39.62 cm G9 Business Laptop PC. 8 GB DDR4 512 GB SSD Solid State Drive"
-      },
-      {
-        "id": "3",
-        "productName":"Mi smart watch",
-        "category":"smartwatch",
-        "price":"4000",
-        "image":"https://m.media-amazon.com/images/I/6152wS4BKxL._AC_UF1000,1000_QL80_.jpg",
-        "stock":"20",
-        "rating":"3.8",
-        "description":"HP ProBook 450 (15.6) 39.62 cm G9 Business Laptop PC. 8 GB DDR4 512 GB SSD Solid State Drive"
-      },
-      {
-        "id": "4",
-        "productName":"realme Buds N100",
-        "category":"neckband",
-        "price":"1500",
-        "image":"https://m.media-amazon.com/images/I/31NJU1xDaNL._AC_UF1000,1000_QL80_.jpg",
-        "stock":"20",
-        "rating":"4.1",
-        "description":"Wireless Pro can play audio at 50% volume and AAC quality for 16hrs with Noise Cancellation on, 22hrs with Noise Cancellation off"
-      },
-
-      {
-        "id": "5",
-        "productName":"Mi 11 X",
-        "category":"mobile",
-        "price":"25000",
-        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyPLwes6sHfVYyx6LRxFaGJVFBWjx335N4dnwEHqKISLnKVJkvDB-eFtttnTlKSe3dRSg&usqp=CAU",
-        "stock":"30",
-        "rating":"2.7",
-        "description":"Qualcomm SM8250-AC Snapdragon 870 5G (7 nm)"
-      },
-      {
-        "id": "6",
-        "productName":"Hp Probook",
-        "category":"laptop",
-        "price":"62500",
-        "image":"https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/c/0/c08182657_1.png",
-        "stock":"20",
-        "rating":"3.9",
-        "description":"HP ProBook 450 (15.6) 39.62 cm G9 Business Laptop PC. 8 GB DDR4 512 GB SSD Solid State Drive"
-      },
-      {
-        "id": "7",
-        "productName":"Mi smart watch",
-        "category":"smartwatch",
-        "price":"4000",
-        "image":"https://m.media-amazon.com/images/I/6152wS4BKxL._AC_UF1000,1000_QL80_.jpg",
-        "stock":"20",
-        "rating":"3.8",
-        "description":"HP ProBook 450 (15.6) 39.62 cm G9 Business Laptop PC. 8 GB DDR4 512 GB SSD Solid State Drive"
-      },
-      {
-        "id": "8",
-        "productName":"realme Buds N100",
-        "category":"neckband",
-        "price":"1500",
-        "image":"https://m.media-amazon.com/images/I/31NJU1xDaNL._AC_UF1000,1000_QL80_.jpg",
-        "stock":"20",
-        "rating":"2.1",
-        "description":"Wireless Pro can play audio at 50% volume and AAC quality for 16hrs with Noise Cancellation on, 22hrs with Noise Cancellation off"
-      }
-    ]
-  }
+  "Products": [
+    {
+      "id": "1",
+      "productName": "Mi 11 X",
+      "category": "mobile",
+      "price": "25000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyPLwes6sHfVYyx6LRxFaGJVFBWjx335N4dnwEHqKISLnKVJkvDB-eFtttnTlKSe3dRSg&usqp=CAU",
+      "stock": "30",
+      "rating": "4.2",
+      "description": "Qualcomm SM8250-AC Snapdragon 870 5G (7 nm)"
+    },
+    {
+      "id": "2",
+      "productName": "Hp Probook",
+      "category": "laptop",
+      "price": "62500",
+      "image": "https://in-media.apjonlinecdn.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/c/0/c08182657_1.png",
+      "stock": "20",
+      "rating": "2.4",
+      "description": "HP ProBook 450 (15.6) 39.62 cm G9 Business Laptop PC. 8 GB DDR4 512 GB SSD Solid State Drive"
+    },
+    {
+      "id": "3",
+      "productName": "Mi smart watch",
+      "category": "smartwatch",
+      "price": "4000",
+      "image": "https://m.media-amazon.com/images/I/6152wS4BKxL._AC_UF1000,1000_QL80_.jpg",
+      "stock": "20",
+      "rating": "3.8",
+      "description": "HP ProBook 450 (15.6) 39.62 cm G9 Business Laptop PC. 8 GB DDR4 512 GB SSD Solid State Drive"
+    },
+    {
+      "id": "4",
+      "productName": "realme Buds N100",
+      "category": "neckband",
+      "price": "1500",
+      "image": "https://m.media-amazon.com/images/I/31NJU1xDaNL._AC_UF1000,1000_QL80_.jpg",
+      "stock": "20",
+      "rating": "4.1",
+      "description": "Wireless Pro can play audio at 50% volume and AAC quality for 16hrs with Noise Cancellation on, 22hrs with Noise Cancellation off"
+    },
+    {
+      "id": "5",
+      "productName": "Shirt",
+      "category": "clothing",
+      "price": "1500",
+      "image": "https://www.pngall.com/wp-content/uploads/5/Long-Sleeve-Shirt-PNG.png",
+      "stock": "50",
+      "rating": "4.5",
+      "description": "Men's Casual Slim Fit Shirt"
+    },
+    {
+      "id": "6",
+      "productName": "Dell Inspiron",
+      "category": "laptop",
+      "price": "55000",
+      "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/inspiron-notebooks/15-3535-amd/media-gallery/silver-plastic/notebook-inspiron-15-3535-nt-plastic-silver-gallery-2.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=606&qlt=100,1&resMode=sharp2&size=606,402&chrss=full",
+      "stock": "25",
+      "rating": "4.3",
+      "description": "Dell Inspiron 15 3511 (2021) Laptop (11th Gen Core i3-1115G4/8GB/1TB HDD/Windows 10)"
+    },
+    {
+      "id": "7",
+      "productName": "Casual Shoes",
+      "category": "footwear",
+      "price": "3000",
+      "image": "https://5.imimg.com/data5/SELLER/Default/2021/8/LU/HV/TS/134596734/dsc-6873-500x500.JPG",
+      "stock": "40",
+      "rating": "4.7",
+      "description": "Men's Fashion Sneakers"
+    },
+    {
+      "id": "8",
+      "productName": "Toaster",
+      "category": "kitchen",
+      "price": "2500",
+      "image": "https://c1.wallpaperflare.com/preview/36/42/342/bread-home-appliances-small-appliances-thumbnail.jpg",
+      "stock": "15",
+      "rating": "4.6",
+      "description": "2-Slice Toaster with 7 Toast Shade Settings and Warming Rack"
+    },
+    {
+      "id": "9",
+      "productName": "Tennis Racket",
+      "category": "sports",
+      "price": "5000",
+      "image": "https://media.istockphoto.com/id/1064972966/photo/3d-rendering-a-single-tennis-racquet-lying-with-a-yellow-ball-on-white-background.jpg?s=612x612&w=0&k=20&c=iRkCAnAmk1dezXXkWXrYoAAb_ALonRzW2xZ9Zv_zAc8=",
+      "stock": "10",
+      "rating": "4.3",
+      "description": "Wilson Federer Tennis Racket"
+    },
+    {
+      "id": "10",
+      "productName": "Gaming Mouse",
+      "category": "gaming",
+      "price": "4000",
+      "image": "https://m.media-amazon.com/images/I/61XCqK+a6LL.jpg",
+      "stock": "20",
+      "rating": "4.8",
+      "description": "Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 25K Sensor, 25,600 DPI, RGB, Adjustable Weights, 11 Programmable Buttons, On-Board Memory, PC / Mac"
+    },
+    {
+      "id": "11",
+      "productName": "Telescope",
+      "category": "science",
+      "price": "10000",
+      "image": "https://media.istockphoto.com/id/174899495/photo/isolated-telescope.jpg?s=612x612&w=0&k=20&c=bJSuOp3jm1olbT9TF8NY6E2DAMHqATWAJaw9qKeb0bU=",
+      "stock": "8",
+      "rating": "4.9",
+      "description": "Gskyer Telescope, 70mm Aperture 400mm AZ Mount Astronomical Refracting Telescope for Kids Beginners - Travel Telescope with Carry Bag, Phone Adapter and Wireless Remote"
+    },
+    {
+      "id": "12",
+      "productName": "Blender",
+      "category": "kitchen",
+      "price": "3500",
+      "image": "https://hotpointuk.vtexassets.com/arquivos/ids/168834-800-auto?v=638017799768300000&width=800&height=auto&aspect=true",
+      "stock": "12",
+      "rating": "4.4",
+      "description": "Ninja Professional Countertop Blender with 1100-Watt Base, 72 Oz Total Crushing Pitcher and (2) 16 Oz Cups for Frozen Drinks and Smoothies"
+    },
+    {
+      "id": "13",
+      "productName": "Guitar",
+      "category": "music",
+      "price": "8000",
+      "image": "https://www.freepnglogos.com/uploads/guitar-png/guitar-music-entertainment-png-images-10.png",
+      "stock": "15",
+      "rating": "3.2",
+      "description": "Fender FA-115 Acoustic Guitar Bundle with Gig Bag, Tuner, Strings, Strap, Picks, and Austin Bazaar Instructional DVD"
+    },
+    {
+      "id": "14",
+      "productName": "Bed Sheets",
+      "category": "home",
+      "price": "2000",
+      "image": "https://assets.ajio.com/medias/sys_master/root/hf9/h05/15172207247390/-473Wx593H-460539948-purple-MODEL.jpg",
+      "stock": "20",
+      "rating": "2.6",
+      "description": "Queen Size Bed Sheets Set - Brushed Microfiber 1800 Thread Count Percale - 16 Inch Deep Pocket Wrinkle Free and Hypoallergenic - 4 Piece"
+    },
+    {
+      "id": "15",
+      "productName": "Lawn Mower",
+      "category": "outdoor",
+      "price": "12000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_x7BtymsrS_fNGugn0hYWeeOkQW_7-AvJBBa8p3-vwQ&s",
+      "stock": "10",
+      "rating": "4.5",
+      "description": "American Lawn Mower Company 50514 14-Inch 11-Amp Corded Electric Lawn Mower, Black"
+    },
+    {
+      "id": "16",
+      "productName": "Smart TV",
+      "category": "electronics",
+      "price": "45000",
+      "image": "https://www.globusinfocom.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/m/smart-tv.png",
+      "stock": "10",
+      "rating": "2.7",
+      "description": "Samsung 108 cm (43 inches) Crystal 4K Pro Series Ultra HD Smart LED TV UA43AUE70AKLXL (Black) (2021 Model)"
+    },
+    {
+      "id": "17",
+      "productName": "Coffee Maker",
+      "category": "kitchen",
+      "price": "3000",
+      "image": "https://images.philips.com/is/image/philipsconsumer/a50d66780d67407aaf4ead14012aa4dc?wid=420&hei=360&$jpglarge$",
+      "stock": "15",
+      "rating": "4.3",
+      "description": "Braun KF7170SI BrewSense Drip Coffeemaker, 12 Cup, Stainless Steel"
+    },
+    {
+      "id": "18",
+      "productName": "Backpack",
+      "category": "accessories",
+      "price": "2500",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgIYBzkaXdNbrTwRDnLKQAEd_ZZnhlGmBoN0yCUnXdpg&s",
+      "stock": "20",
+      "rating": "3.8",
+      "description": "Travel Laptop Backpack Water Resistant Anti-Theft Bag with USB Charging Port and Lock 14/15.6 Inch Computer Business Backpacks for Women Men College School Student Gift,Bookbag Casual Hiking Daypack"
+    },
+    {
+      "id": "19",
+      "productName": "Yoga Mat",
+      "category": "sports",
+      "price": "1500",
+      "image": "https://assetscdn1.paytm.com/images/catalog/product/S/SP/SPOSTRAUSS-NBR-KHEL193268E2FF5019/1612004222297_17.jpg",
+      "stock": "25",
+      "rating": "2.6",
+      "description": "BalanceFrom GoYoga All Purpose High Density Non-Slip Exercise Yoga Mat with Carrying Strap, 1/4"
+    },
+    {
+      "id": "20",
+      "productName": "Dining Table",
+      "category": "furniture",
+      "price": "20000",
+      "image": "https://www.jangirdecor.in/cdn/shop/files/pixelcut-1_97.png?v=1699073670",
+      "stock": "8",
+      "rating": "3.5",
+      "description": "6 Seater Dining Table Set with Chairs Solid Sheesham Wood 6 Chairs Dining Table Wooden Dining Room Furniture Honey Finish"
+    }
+  ]
+}

@@ -19,7 +19,7 @@
     border-radius: 0px;
 }
 .main-navbar .top-navbar .dropdown-menu .dropdown-item{
-    padding: 8px 16px;
+    padding: 8px 10px;
     border-bottom: 1px solid #ccc;
     font-size: 14px;
 }
@@ -50,5 +50,39 @@
     padding-left: 30px;
 }
 .custom-nav-link{
-    margin-left: 35%;
+    margin-left: 25%;
 }
+
+
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+
+
+
+

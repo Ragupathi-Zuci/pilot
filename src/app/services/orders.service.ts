@@ -34,4 +34,15 @@ export class OrdersService {
       return errorMessage;
     });
   }
+
+
+
+  filterProductsByEmail(products: any[], email: string): any[] {
+    return products.filter(product => product.email === email);
+  }
+  getProductDetails(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
+  }
+
+
 }

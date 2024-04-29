@@ -1,8 +1,9 @@
-<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl custom-modal">
     <div class="modal-content">
         <div class="modal-header">
             <h2 class="modal-title">{{ firstname }}</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="bsModalRef.hide()"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                (click)="bsModalRef.hide()"></button>
         </div>
         <div class="modal-body">
             <table class="table">
@@ -12,16 +13,20 @@
                         <th>Product Name</th>
                         <th>Price</th>
                         <th>Category</th>
-                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let item of updatedCartItems">
-                        <td><img src="{{ item.image }}" alt="{{ item.productName }}" style="max-width: 100px; max-height: 100px;"></td>
+                        <td><img src="{{ item.image }}" alt="{{ item.productName }}"
+                                style="max-width: 100px; max-height: 100px;"></td>
                         <td>{{ item.productName }}</td>
                         <td>{{ item.price }}</td>
                         <td>{{ item.category }}</td>
-                        <td>{{ item.price }}</td>
+                        <td>{{ item.quantity ? item.quantity : 1 }}</td>
+                        <td>{{ item.price * (item.quantity ? item.quantity : 1) }}</td>
+
                     </tr>
                 </tbody>
             </table>
